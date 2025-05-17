@@ -1,16 +1,24 @@
-# weather_app
 
-A new Flutter project.
+🌦️ Weather App
+A clean and responsive Flutter weather application that displays real-time weather data using a public API.
 
-## Getting Started
+🚀 Features
+✅ State Management: Built with Bloc/Cubit for scalable and maintainable logic
 
-This project is a starting point for a Flutter application.
+🌐 API Integration: Uses the Dio package for efficient network calls
 
-A few resources to get you started if this is your first Flutter project:
+🎨 Material Design: Custom themes with MaterialColor for a modern, polished UI
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+📱 Responsive UI: Adaptive layout for all screen sizes
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+🧼 Clean Code Architecture: Easy to read, scalable, and well-organized
+
+⚠️ Error Handling: Graceful handling of API failures and empty states
+
+📂 Structure
+This app follows a layered structure that separates UI, logic, and data clearly to support scalability and easy maintenance.
+
+📦 Packages Used
+flutter_bloc
+dio
+equatable
