@@ -5,6 +5,8 @@ class GetWeatherStates {}
 
 class NoWeatherState extends GetWeatherStates {}
 
+class LoadingWeatherState extends GetWeatherStates {}
+
 class LoadedWeatherState extends GetWeatherStates {
   final WeatherModel weatherModel;
 

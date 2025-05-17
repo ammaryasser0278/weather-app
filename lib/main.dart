@@ -20,14 +20,15 @@ class MyApp extends StatelessWidget {
         builder:
             (context) => BlocBuilder<GetWeatherCubit, GetWeatherStates>(
               builder: (context, state) {
+                final themeColor =
+                    (state is LoadedWeatherState)
+                        ? getWeatherColor(state.weatherModel.weatherState)
+                        : Colors.blue;
                 return MaterialApp(
                   debugShowCheckedModeBanner: false,
                   theme: ThemeData(
-                    primarySwatch: getWeatherColor(
-                      BlocProvider.of<GetWeatherCubit>(
-                        context,
-                      ).weatherModel?.weatherState,
-                    ),
+                    primarySwatch: themeColor,
+                    appBarTheme: AppBarTheme(backgroundColor: themeColor),
                   ),
                   title: 'Weather App',
                   home: const HomeView(),
@@ -41,13 +42,13 @@ class MyApp extends StatelessWidget {
 
 //function that return a material color depends on the weather state
 MaterialColor getWeatherColor(String? condition) {
-  if (condition == null) {
+  if (condition == null || condition.isEmpty) {
     return Colors.blue;
   }
   switch (condition) {
     case 'Sunny':
     case 'Clear':
-      return Colors.yellow;
+      return Colors.amber;
 
     case 'Partly cloudy':
     case 'Fog':
